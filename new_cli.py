@@ -40,7 +40,11 @@ class Record:
         
     def del_phone(self):
         self.phones.clear()
-        
+
+address_book = AddressBook()   
+answers = ["How can I help you?", "Good bye!"]
+commands = ["hello", ["good bye", "close", "exit", "bye", "esc", "q"], "add", "change", "phone", "del", "kill", "show all"]
+
 def proverka( a, n):
     command = a.split(" ")
     m = len(command)
@@ -50,9 +54,6 @@ def proverka( a, n):
         except IndexError:
             return command[1].capitalize() , None
         
-address_book = AddressBook()   
-answers = ["How can I help you?", "Good bye!"]
-commands = ["hello", ["good bye", "close", "exit", "bye", "esc", "q"], "add", "change", "phone", "del", "kill", "show all"]
 
 def reply(command):
     
